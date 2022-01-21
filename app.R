@@ -4,6 +4,7 @@
 library(shiny)
 library(shinythemes)
 
+## UI
 ui <- fluidPage(theme = shinytheme("superhero"),
                 navbarPage("BMI Calculator:",
                            
@@ -37,10 +38,7 @@ ui <- fluidPage(theme = shinytheme("superhero"),
                 ) # navbarPage()
 ) # fluidPage()
 
-
-####################################
-# Server                           #
-####################################
+## SERVER
 server <- function(input, output, session) {
   
   # Input Data
@@ -71,5 +69,5 @@ server <- function(input, output, session) {
   
 }
 
-# Run the application 
+# RUN APPLICATION
 shinyApp(ui = ui, server = server)
